@@ -19,6 +19,8 @@ fsspec==2024.6.1
 ftfy==6.3.1
 furl==2.1.4
 h11==0.16.0
+hf-xet==1.1.5
+huggingface-hub==0.33.5
 idna==3.10
 imageio==2.37.0
 Jinja2==3.1.4
@@ -62,6 +64,7 @@ regex==2024.11.6
 requests==2.32.4
 rich==14.0.0
 rpds-py==0.26.0
+safetensors==0.5.3
 scikit-image==0.25.2
 scipy==1.16.0
 setuptools==70.2.0
@@ -74,10 +77,7 @@ starlette==0.47.2
 stringzilla==3.12.5
 sympy==1.13.3
 tifffile==2025.6.11
-# Excluding these from requirements. Only install using pip command line
-#torch==2.7.1+cpu --index-url https://download.pytorch.org/whl/cpu
-#torchaudio==2.7.1+cpu --index-url https://download.pytorch.org/whl/cpu
-#torchvision==0.22.1+cpu --index-url https://download.pytorch.org/whl/cpu
+timm==1.0.19
 torchtyping==0.1.5
 tqdm==4.67.1
 typeguard==2.13.3

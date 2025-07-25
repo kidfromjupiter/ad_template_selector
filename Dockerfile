@@ -1,22 +1,12 @@
 # Use smallest official Python Alpine image
-FROM python:3.13-alpine
+FROM python:3.13-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 ## Install system dependencies
-RUN apk update && apk add --no-cache \
-    git \
-    build-base \
-    libffi-dev \
-    musl-dev \
-    gcc \
-    jpeg-dev \
-    zlib-dev \
-    python3-dev \
-    py3-pip \
-    && rm -rf /var/cache/apk/*
+RUN apt-get update && apt-get install -y build-essential git libgl1 libglib2.0-0
 
 # Set work directory
 WORKDIR /app
@@ -26,10 +16,13 @@ COPY . /app
 COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
 
-RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# for better caching
+
+RUN pip install --no-cache-dir -r torch_requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
+
 
 # Expose port
 EXPOSE 2500
