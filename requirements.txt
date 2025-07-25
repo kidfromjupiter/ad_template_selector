@@ -74,10 +74,11 @@ starlette==0.47.2
 stringzilla==3.12.5
 sympy==1.13.3
 tifffile==2025.6.11
-torch==2.7.1+cpu --index-url https://download.pytorch.org/whl/cpu
-torchaudio==2.7.1+cpu --index-url https://download.pytorch.org/whl/cpu
+# Excluding these from requirements. Only install using pip command line
+#torch==2.7.1+cpu --index-url https://download.pytorch.org/whl/cpu
+#torchaudio==2.7.1+cpu --index-url https://download.pytorch.org/whl/cpu
+#torchvision==0.22.1+cpu --index-url https://download.pytorch.org/whl/cpu
 torchtyping==0.1.5
-torchvision==0.22.1+cpu --index-url https://download.pytorch.org/whl/cpu
 tqdm==4.67.1
 typeguard==2.13.3
 typer==0.16.0
