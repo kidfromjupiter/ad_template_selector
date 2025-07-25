@@ -1,0 +1,10 @@
+{
+  "temp1.indt": {
+    "image_slots": 3,
+    "text_char_capacity": 727
+  },
+  "temp2.indt": {
+    "image_slots": 5,
+    "text_char_capacity": 700
+  }
+}
