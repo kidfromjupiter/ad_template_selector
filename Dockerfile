@@ -7,16 +7,16 @@ ENV PYTHONUNBUFFERED=1
 
 ## Install system dependencies
 RUN apk update && apk add --no-cache \
-    git
-#    build-base \
-#    libffi-dev \
-#    musl-dev \
-#    gcc \
-#    jpeg-dev \
-#    zlib-dev \
-#    python3-dev \
-#    py3-pip \
-#    && rm -rf /var/cache/apk/*
+    git \
+    build-base \
+    libffi-dev \
+    musl-dev \
+    gcc \
+    jpeg-dev \
+    zlib-dev \
+    python3-dev \
+    py3-pip \
+    && rm -rf /var/cache/apk/*
 
 # Set work directory
 WORKDIR /app
