@@ -1,0 +1,4 @@
+/templates/
+/.venv/
+/cache/
+/.env

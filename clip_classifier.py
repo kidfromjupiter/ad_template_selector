@@ -25,13 +25,16 @@ class ClipImageClassifier:
             "an office",
             "abstract art",
         ]
-        self.other_categories = [
-            "a person",
+        self.logo = [
             "a logo",
-            "icons",
+        ]
+        self.person_categories = [
+            "a person",
+            "headshot",
+
         ]
 
-        self.categories = self.house_categories + self.other_categories
+        self.categories = self.house_categories + self.logo + self.person_categories
         self.text_tokens = clip.tokenize(self.categories).to(self.device)
 
     def classify(self, roi: np.ndarray) -> tuple[str, float]:
@@ -60,3 +63,9 @@ class ClipImageClassifier:
 
     def is_house_related(self, label: str) -> bool:
         return label in self.house_categories
+
+    def is_logo_related(self, label: str) -> bool:
+        return label in self.logo
+
+    def is_person_related(self, label: str) -> bool:
+        return label in self.person_categories

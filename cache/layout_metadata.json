@@ -6,5 +6,9 @@
   "temp2.indt": {
     "image_slots": 5,
     "text_char_capacity": 700
+  },
+  "template3.indt": {
+    "image_slots": 3,
+    "text_char_capacity": 727
   }
 }
