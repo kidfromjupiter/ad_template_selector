@@ -191,6 +191,7 @@ async def select_template(
            best_match.data['realtor']['name']: name,
                           best_match.data['realtor']['email']: email,
                           best_match.data['realtor']['address']: address,
+                          "template_name": best_match.name
                           }
 
 
